@@ -50,3 +50,13 @@ This project is a fully functional ecommerce website designed to provide users w
 ### Deployment
 - Heroku or AWS (for hosting and deployment)
 
+#Milestone 1
+
+* Completed foundation for E-commerce application.
+
+#Milestone 2
+
+* Separate folders for frontend and backend.
+* A functional Login Page in the frontend.
+* Completed setting for tailwind-Css.
+
