@@ -60,9 +60,12 @@ This project is a fully functional ecommerce website designed to provide users w
 * A functional Login Page in the frontend.
 * Completed setting for tailwind-Css.
 
+<<<<<<< HEAD
 #Milestone 3
 
 * Organized the **backend folder structure** for scalability
 * Connected the **server to mongoDB** using Mongoose
 * Implemented **error-handling middleware** for API stability .
 
+=======
+>>>>>>> e8990bf7e6111aac5dd701424986c924e7137e67
