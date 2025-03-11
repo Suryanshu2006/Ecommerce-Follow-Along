@@ -50,29 +50,34 @@ This project is a fully functional ecommerce website designed to provide users w
 ### Deployment
 - Heroku or AWS (for hosting and deployment)
 
-#Milestone 1
+# Milestone 1
 
 * Completed foundation for E-commerce application.
 
-#Milestone 2
+# Milestone 2
 
 * Separate folders for frontend and backend.
 * A functional Login Page in the frontend.
 * Completed setting for tailwind-Css.
 
-#Milestone 3
+# Milestone 3
 
 * Organized the **backend folder structure** for scalability
 * Connected the **server to mongoDB** using Mongoose
 * Implemented **error-handling middleware** for API stability .
 
-#Milestone 4
+# Milestone 4
 
 * Created the **User Model** in Mongoose to define the user data structure.
 * developed the **User Controller** to manage user authenticsation (signup, login).
 * Implemented **Multer for file handling** allowing user profile and product image uploads.
 
-#Milestone 5
+# Milestone 5
 
 *created the **Signup page** in React and added code for Signup backend also.
 *Added the **Sign up page** validation in (Signup,login).
+
+# Milestone 6(using bcryptjs to hash password)
+
+*Added the **password encryption** in backend signup page.
+*Added comparision for checking password if correct or not in login backend.
