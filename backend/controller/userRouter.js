@@ -4,7 +4,7 @@ const userRouter = express.Router();
 
 const {userModel} = require('../models/userModel');
 
-const uploadUserImage = require('../middleware/multer');
+const uploadUserImage = require('../middlewares/multer');
 
 const bcrypt = require('bcryptjs');
 
@@ -30,7 +30,7 @@ userRouter.post("/signUp",uploadUserImage.single("image"),async(request,response
        return response.status(500).send({message:"Error occurred while signing up user"});
     }    
 })
-userModel.postLogin("/login",async(request,response) => {
+userRouter.post("/login",async(request,response) => {
     try {
         const {email, password} = request.body;
         if(email==""||password==""){
@@ -51,4 +51,4 @@ userModel.postLogin("/login",async(request,response) => {
 
 
 
-module.exports = userRouter();
+module.exports = userRouter;
