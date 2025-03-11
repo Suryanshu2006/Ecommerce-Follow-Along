@@ -71,3 +71,8 @@ This project is a fully functional ecommerce website designed to provide users w
 * Created the **User Model** in Mongoose to define the user data structure.
 * developed the **User Controller** to manage user authenticsation (signup, login).
 * Implemented **Multer for file handling** allowing user profile and product image uploads.
+
+#Milestone 5
+
+*created the **Signup page** in React and added code for Signup backend also.
+*Added the **Sign up page** validation in (Signup,login).
