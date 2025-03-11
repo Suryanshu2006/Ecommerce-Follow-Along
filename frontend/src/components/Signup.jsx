@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Signup.css"
-
+import {useState} from 'react'
 const Signup = () => {
     const[userDetail,setUserDetails]= useState({
         name:"",
@@ -12,7 +12,7 @@ const Signup = () => {
         setUserDetails({...userDetail,[event.target.name]:event.target.value})
     }
 
-    async function hancleSubmit(){
+    async function handleSubmit(){
         if(userDetail.name == ""){
             alert("Please enter your Name");
             return;
