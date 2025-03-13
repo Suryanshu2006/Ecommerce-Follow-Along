@@ -81,3 +81,7 @@ This project is a fully functional ecommerce website designed to provide users w
 
 *Added the **password encryption** in backend signup page.
 *Added comparision for checking password if correct or not in login backend.
+
+# Milestone 7 
+*Created **Login Endpoint** to accept user credentials.
+*Used **bcrypt** to hash the password and **compared** with stored password.
