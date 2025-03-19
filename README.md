@@ -94,3 +94,7 @@ This project is a fully functional ecommerce website designed to provide users w
 * Created **form for product upload**.
 * Created **add product** page in frontend.
 * Added **form validation** in Add Products page.
+
+# Milestone 10
+* Created the **Product Router**, **Product Model** in backend.
+*handled **File Uplaods** by multer inside middlewarae multer.
