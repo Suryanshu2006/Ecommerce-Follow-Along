@@ -74,18 +74,18 @@ This project is a fully functional ecommerce website designed to provide users w
 
 # Milestone 5
 
-*created the **Signup page** in React and added code for Signup backend also.
-*Added the **Sign up page** validation in (Signup,login).
+* created the **Signup page** in React and added code for Signup backend also.
+* Added the **Sign up page** validation in (Signup,login).
 
 # Milestone 6(using bcryptjs to hash password)
 
-*Added the **password encryption** in backend signup page.
-*Added comparision for checking password if correct or not in login backend.
+* Added the **password encryption** in backend signup page.
+* Added comparision for checking password if correct or not in login backend.
 
 # Milestone 7 
-*Created **Login Endpoint** to accept user credentials.
-*Used **bcrypt** to hash the password and **compared** with stored password.
+* Created **Login Endpoint** to accept user credentials.
+* Used **bcrypt** to hash the password and **compared** with stored password.
 
 # Milestone 8 
-*Created the **card component** and Design a reusable card component with props for product details.
-*Design the **homepage layout** and Set up a grid layout or flexbox for displaying multiple cards neatly.
+* Created the **card component** and Design a reusable card component with props for product details.
+* Design the **homepage layout** and Set up a grid layout or flexbox for displaying multiple cards neatly.
