@@ -89,3 +89,8 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 8 
 * Created the **card component** and Design a reusable card component with props for product details.
 * Design the **homepage layout** and Set up a grid layout or flexbox for displaying multiple cards neatly.
+
+# Milestone 9
+* Created **form for product upload**.
+* Created **add product** page in frontend.
+* Added **form validation** in Add Products page.
