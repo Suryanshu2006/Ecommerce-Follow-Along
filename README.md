@@ -85,3 +85,7 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 7 
 *Created **Login Endpoint** to accept user credentials.
 *Used **bcrypt** to hash the password and **compared** with stored password.
+
+# Milestone 8 
+*Created the **card component** and Design a reusable card component with props for product details.
+*Design the **homepage layout** and Set up a grid layout or flexbox for displaying multiple cards neatly.

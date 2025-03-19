@@ -1,0 +1,17 @@
+.Card{
+    width: max-content;
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    padding: 0.5rem;
+}
+
+.Card img {
+    width: 15rem; 
+    height: 15rem;
+    display: block; 
+    margin: auto;
+  }
+  .Card h3{
+    width: 13rem;
+  }
+  

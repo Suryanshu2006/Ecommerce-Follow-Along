@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.navbar > div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    flex-wrap: nowrap;
+}
+.navbar > div:nth-child(2) div{
+    color: blue;
+    text-decoration: solid;
+    font-weight: 500;
+    
+}
+.navbar h1 {
+    color: navy;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.navbar > div:nth-child(2) div:hover{
+cursor:pointer
+}
+.navbar h1:hover{
+    cursor:pointer
+}
