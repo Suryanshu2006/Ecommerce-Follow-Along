@@ -16,9 +16,16 @@ productRouter.post("/addproduct", async (req, res) => {
     if (!title || !description || !price) {
       return res.status(404).send({ msg: "Please add all fields" });
     }
-    // const images = req.file; // Commented out as it is not used
+    const images = req.file; 
+    const imageLinkArray=[];
+    images.forEach((ele)=>{
+      console.log(ele);
+    })
+    return response.status(200).send({msg:"Product added sucessfully"})
 
   } catch (error) {
     return res.status(500).send({ msg: "something went wrong", error });
   }
 });
+
+module.exports = productRouter;
