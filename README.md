@@ -102,3 +102,7 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 11
 * Created **Home page** for dynamic product presentation.
 * Added the **Backend** part for handeling products (created endpoints to get products).
+
+# Milestone 12
+* Created **Product page** for dynamic product presentation according to user mail.
+* Created **Backend** for specific user products
