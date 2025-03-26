@@ -1,0 +1,13 @@
+/* Login.css */
+
+.formbox{
+  border: 3px solid blue;
+  width: max-content;
+  margin: auto;
+  padding: 2rem;
+}
+
+.formbox > *{
+  display: block;
+  margin: auto;
+}
