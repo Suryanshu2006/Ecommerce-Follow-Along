@@ -5,16 +5,17 @@ import styles from './AddProduct.module.css';
 const AddProduct = () => {
     const [noOfImages, setNoOfImages] = useState(new Array(1).fill(1));
     const [productDetails,setProductDetails] = useState({
-        name:"",
-        email:"",
-        password:""
+        title:"",
+        description:"",
+        price:""
     });
     const [productImages,setProductImages] = useState([]);
 
     async function handleSubmit(e){
+        e.preventDefault();
         try {
-            const {name, email, password} = productDetails;
-            if (!name || !email || !password || productImages.length == 0) {
+            const {title,description,price} = productDetails;
+            if (!title || !description || !price || productImages.length == 0) {
                 alert("Please add all fields");
                 return;
             }
@@ -24,9 +25,9 @@ const AddProduct = () => {
                 return;
             }
             const formData = new FormData();
-            formData.append("name", name);
-            formData.append("email", email);
-            formData.append("password", password);
+            formData.append("title",title);
+            formData.append("description",description);
+            formData.append("price",price);
             for(let i=0;i<productImages.length;i++){
                 formData.append("image",productImages[i]);
             }
@@ -72,6 +73,7 @@ const AddProduct = () => {
                     }} />
                 ))
             }
+            <input type="submit" value={"upload product"} />
         </form>
     </div>
   )

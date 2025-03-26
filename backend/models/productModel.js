@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
-    title:{type:String,required:true,trim:true},
-    description:{type:String,required:true,trim:true},
-    price:{type:Number,required:true},
-    images:{type:[Strings],required:true},
-    createdAt:{type:Date,default:Date.now}
-})
+    title: { type: String, required: true, trim: true },
+    description: { type: String, required: true, trim: true },
+    price: { type: Number, required: true },
+    images: { type: [String], required: true },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "user", required: true } 
+}, { timestamps: true }); 
 
-const productModel = mongoose.model("products",schema);
+const productModel = mongoose.model("products", schema);
 
-MediaSourceHandle.exports = productModel;
+module.exports = productModel;

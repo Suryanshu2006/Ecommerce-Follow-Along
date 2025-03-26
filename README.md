@@ -52,13 +52,13 @@ This project is a fully functional ecommerce website designed to provide users w
 
 # Milestone 1
 
-* Completed foundation for E-commerce application.
+* Completed **foundation** for E-commerce application.
 
 # Milestone 2
 
-* Separate folders for frontend and backend.
-* A functional Login Page in the frontend.
-* Completed setting for tailwind-Css.
+* Created **Separate folders** for frontend and backend.
+* A **functional Login** Page in the frontend.
+* Completed setting for **tailwind-Css**.
 
 # Milestone 3
 
@@ -77,9 +77,9 @@ This project is a fully functional ecommerce website designed to provide users w
 * created the **Signup page** in React and added code for Signup backend also.
 * Added the **Sign up page** validation in (Signup,login).
 
-# Milestone 6(using bcryptjs to hash password)
+# Milestone 6
 
-* Added the **password encryption** in backend signup page.
+* Added the **password encryption** in backend signup page.(Bcrypt)
 * Added comparision for checking password if correct or not in login backend.
 
 # Milestone 7 
@@ -110,3 +110,7 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 13
 * Created **Product update** endpoint for updating products.
 * Created **form** for updating data in frontend and created **autofill function**
+
+# Milestone 14
+* Created **an end point** to delete a product.
+* created **form** for deleting product in frontend.

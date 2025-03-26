@@ -44,7 +44,7 @@ userRouter.post("/signup", async (req, res) => {
                 image: imageUrl 
             });
             
-            return res.status(201).json({ message: "User registered successfully", token:token });
+            return res.status(201).json({ message: "User registered successfully", token:token,name,id:newUser.id });
         });
     } catch (error) {
         console.error("Signup Error:", error);
@@ -73,7 +73,7 @@ userRouter.post("/login", async (req, res) => {
         if (matchedPass) {
             const token = jwt.sign({ name:user.name,email:user.email,id:user.id }, process.env.JWT_PASSWORD);
 
-            return res.status(200).json({ message: "User logged in successfully",token });
+            return res.status(200).json({ message: "User logged in successfully",token,name:user.name,id:user.id});
         } else {
             return res.status(401).json({ message: "Invalid email or password" });
         }
