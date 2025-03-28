@@ -1,43 +1,40 @@
-const express = require("express");
-
+const express = require('express');
 const app = express();
-
 app.use(express.json());
-
-const mongoose = require("mongoose");
-
-const dotenv = require("dotenv");
-
+const dotenv = require('dotenv');
 dotenv.config();
-
-const jwt = require('jsonwebtoken');
-
-const userModel = require("./models/userModel");
-
-const cors = require("cors");
-
+const cors = require('cors');
 app.use(cors());
-
-const MONGO_PASSWORD = process.env.MONGO_PASSWORD;
-
-console.log(MONGO_PASSWORD)
-
 const PORT = process.env.PORT || 8080;
+const connect = require('./mongoDB');
+const userRouter = require('./controller/userRouter');
+const productRouter = require('./controller/productRouter');
+const jwt = require('jsonwebtoken');
+const userModel = require('./model/userModel');
+const allProductRouter = require('./controller/allProducts');
 
-const useRouter = require("./controller/userRouter");
-
-const productRouter = require("./controller/productRouter");
 
 
-app.get("/",(req,res)=>{
+app.get("/",(request, response) => {
     try {
-        res.send({message:"This is E-commerce Follow Along Backend"});
+        response.status(200).send({msg:"This is e-commerce code along backend"});
     } catch (error) {
-        res.status(500).send({error});
+        response.status(500).send({message:"error occured"});
+    }    
+})
+app.use("/product",productRouter)
+app.use("/user",userRouter)
+
+app.listen(8000,async() => {
+    try {
+        await connect();
+        console.log("server connected");
+    } catch (error) {
+        console.log("server not connected",error);
     }
 })
 
-app.use("/user",useRouter);
+app.use("/user",userRouter);
 
 app.use("/product",async (req, res, next) => {
     try {
@@ -62,11 +59,4 @@ app.use("/product",async (req, res, next) => {
     }
 },productRouter);
 
-app.listen(PORT,async ()=>{
-    try {
-       await mongoose.connect(`mongodb+srv://abhishektiwari136136:${MONGO_PASSWORD}@cluster0.55lt4.mongodb.net/`);
-       console.log("Connected sucessfully");
-    } catch (error) {
-        console.log("Something went wrong not able to connect to server",error);
-    }
-});
+app.use("/allproducts",allProductRouter);

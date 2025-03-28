@@ -114,3 +114,7 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 14
 * Created **an end point** to delete a product.
 * created **form** for deleting product in frontend.
+
+# Milestone 15
+* Created **Navigation bar** for navigating between pages. 
+* 

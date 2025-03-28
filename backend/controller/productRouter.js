@@ -1,6 +1,6 @@
 const express = require("express");
 const productRouter = express.Router();
-const productModel = require("../models/productModel");
+const productModel = require("../model/productModel");
 const { productImages } = require("../middleware/multer");
 
 
@@ -52,5 +52,24 @@ productRouter.post("/addproduct", uploadImages, async (req, res) => {
         return res.status(500).json({ msg: "Something went wrong", error: error.message });
     }
 });
+
+productRouter.put("/update/:id",uploadImages,async(req,res)=>{
+    try {
+        const{id} = req.params;
+        if(!id){
+            return res.status(400).send({message:"please provide id"});
+        }
+        const {title,description,price} = req.body;
+        if(!req.files || req.files.length === 0){
+            return res.status(400).send({message:"at least one image is required"});
+        }
+        const imageUrls = req.files.map(file => `http://localhost:8080/uploads/productImages/${file.filename}`);
+        const updateProduct = await productModel.findByIdAndUpdate({_id:id},{title,description,price,imageUrls});
+        res.status(200).send({message:"successfull",updatedProduct});
+    } catch (error) {
+        console.log("error in adding product",error);
+        return res.status(500).json({message:"something went wrong",error:error.message})
+    }
+})
 
 module.exports = productRouter;
