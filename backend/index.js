@@ -12,7 +12,7 @@ const productRouter = require('./controller/productRouter');
 const jwt = require('jsonwebtoken');
 const userModel = require('./model/userModel');
 const allProductRouter = require('./controller/allProducts');
-
+const path = require('path');
 
 
 app.get("/",(request, response) => {
@@ -60,3 +60,5 @@ app.use("/product",async (req, res, next) => {
 },productRouter);
 
 app.use("/allproducts",allProductRouter);
+
+app.use("/uploads",express.static(path.join(__dirname,"uploads")))

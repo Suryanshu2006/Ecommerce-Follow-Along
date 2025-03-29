@@ -117,4 +117,7 @@ This project is a fully functional ecommerce website designed to provide users w
 
 # Milestone 15
 * Created **Navigation bar** for navigating between pages. 
-* 
+
+# Milestone 16
+* Created **Product Details Page** for showing full product details in details page.
+* Added **Add to Cart Button** with **Quantity selection**.

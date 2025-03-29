@@ -3,15 +3,20 @@ import axios from 'axios'
 import { useState ,useEffect } from 'react';
 import Card from './Card';
 import styles from './products.module.css'
-
-const products = () => {
+import MyProductCard from './MyProductCard';
+const MyProducts = () => {
   const [products,setProducts] = useState([]);
 
     function getData(){
         axios.get("http://localhost:8000/allproducts")
         .then(response => {
             console.log(data);
-            setProducts(data.products);
+
+            const userData = JSON.parse(localStorage.getItem("follow-along-auth-token-user-name-id"))
+            const  newData = data.products.filter((ele)=>{
+                return ele.userId == userData.id;
+            })
+            setProducts(newData);
         }).catch(err => {
             console.log(err);
         });
@@ -25,11 +30,11 @@ const products = () => {
     <div className={styles.products}>
       {
         products.map(ele => {
-          return <Card products={ele} key={ele.id}/>
+          return <MyProductCard product={ele} key={ele.id}/>
         })
       }
     </div>
   )
 }
 
-export default products
+export default MyProducts;
