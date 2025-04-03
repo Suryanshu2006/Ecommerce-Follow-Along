@@ -72,4 +72,21 @@ productRouter.put("/update/:id",uploadImages,async(req,res)=>{
     }
 })
 
+productRouter.delete("/delete/:id",async(req,res)=>{
+    try {
+        const{id} = req.params;
+        if(!id){
+            return res.status(400).send({message:"please provide id"});
+        }
+        const updatedProduct = await productModel.findByIdAndDelete({_id:id});
+        if(!updatedProduct){
+            return res.status(404).send({message:"product not found"});
+        }
+       return res.status(200).send({message:"successfully deleted"});
+    } catch (error) {
+        console.log("error in deleting product",error);
+        return res.status(500).json({message:"something went wrong",error:error.message})
+    }
+})
+
 module.exports = productRouter;
