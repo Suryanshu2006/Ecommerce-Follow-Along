@@ -121,3 +121,7 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 16
 * Created **Product Details Page** for showing full product details in details page.
 * Added **Add to Cart Button** with **Quantity selection**.
+
+# Milestone 17
+* Created endpoint in backend ***CRUD*** for handling cart.
+* Handled **quantity for product** in cart.

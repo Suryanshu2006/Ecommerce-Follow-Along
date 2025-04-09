@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken');
 const userModel = require('./model/userModel');
 const allProductRouter = require('./controller/allProducts');
 const path = require('path');
-
+const cartRouter = require('./controller/cartProducts');
 
 app.get("/",(request, response) => {
     try {
@@ -61,4 +61,26 @@ app.use("/product",async (req, res, next) => {
 
 app.use("/allproducts",allProductRouter);
 
-app.use("/uploads",express.static(path.join(__dirname,"uploads")))
+app.use("/uploads",express.static(path.join(__dirname,"uploads")));
+
+app.use("/cart",cartRouter);
+app.use("/cart",async (req, res, next) => {
+    try {
+        const token = req.header("Authorization");
+        if (!token) {
+            return res.status(401).json({ message: "Please login" });
+        }
+        
+        const decoded = jwt.verify(token, process.env.JWT_PASSWORD);
+        const user = await userModel.findById(decoded.id);
+        
+        if (!user && user.id) {
+            return res.status(404).json({ message: "Please signup" });
+        }
+        req.userId = user.id; 
+        next();
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json({ message: "Invalid Token", error });
+    }
+});
