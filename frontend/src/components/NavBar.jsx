@@ -21,6 +21,9 @@ const NavBar = () => {
             }}>My Products</div>
         </div>
         <div>
+            <div
+                onClick={()=>navigate("/cart")}>cart
+            </div>
             <div onClick={()=>{
                 navigate('/Login')
             }}>Login</div>

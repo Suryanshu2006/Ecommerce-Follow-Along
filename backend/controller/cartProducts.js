@@ -31,6 +31,13 @@ cartRouter.put("/:cartproductid",async(req,res)=>{
             return res.status(400).send({message:"Please Add product id"});
         }
         const {noofcartitem}=req.query;
+    if(noofcartitem==0){
+        const cartItemToBeDeleted = await cartModel.findByIdAndDelete({_id:cartproductid})
+        if(!cartItemToBeDeleted){
+            return res.status(404).send({message:"Item not found of respective id"});
+        }
+        return res.status(200).send({message:"Item deleted sucessfully"});
+    }
         if(noofcartitem<1){
             return res.status(400).send({message:"Cart item should not be less than one"});
         }

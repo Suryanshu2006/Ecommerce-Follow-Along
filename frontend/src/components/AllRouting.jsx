@@ -5,6 +5,7 @@ import Login from './Login'
 import Signup from './Signup'
 import AddProduct from './AddProduct'
 import MyProducts from './MyProducts'
+import cartCard from './CartCard'
 const AllRouting = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const AllRouting = () => {
             <Route path='/Signup' element={<Signup />} />
             <Route path='/addproducts' element={<AddProduct />} />
             <Route path='/myproducts' element={<MyProducts />} />
+            <Route path='/cart' element={<cartCard/>}/>
         </Routes>
       
     </div>
