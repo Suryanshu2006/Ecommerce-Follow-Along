@@ -129,3 +129,6 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 18
 * Created **cart page** in frontend.
 *handled **cart operation** from frontend
+
+# Milestone 19
+* Created **Put** request for updating quantity for cart item.

@@ -1,24 +1,21 @@
 import React from 'react'
-import {Route,Routes} from 'react-router-dom'
-import Products from './Products'
-import Login from './Login'
-import Signup from './Signup'
-import AddProduct from './AddProduct'
-import MyProducts from './MyProducts'
-import cartCard from './CartCard'
+import {Route,Routes} from "react-router-dom";
+import Products from './components/Products';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import AddProduct from './components/AddProduct';
+import MyProducts from './components/MyProducts';
+import Cart from "./components/Cart"
 const AllRouting = () => {
   return (
-    <div>
-        <Routes>
-            <Route path='/' element={<Products />} />
-            <Route path='/Login' element={<Login />} />
-            <Route path='/Signup' element={<Signup />} />
-            <Route path='/addproducts' element={<AddProduct />} />
-            <Route path='/myproducts' element={<MyProducts />} />
-            <Route path='/cart' element={<cartCard/>}/>
-        </Routes>
-      
-    </div>
+    <Routes>
+        <Route path='/' element={<Products/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/addproducts' element={<AddProduct/>}/>
+        <Route path='/myproducts' element={<MyProducts/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+    </Routes>
   )
 }
 
