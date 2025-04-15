@@ -132,3 +132,7 @@ This project is a fully functional ecommerce website designed to provide users w
 
 # Milestone 19
 * Created **Put** request for updating quantity for cart item.
+
+# Milestone 20
+* Created endpoint for **User details** in backend.
+* Created **user.jsx** for user details in frontend.
