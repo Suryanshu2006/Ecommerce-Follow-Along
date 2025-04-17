@@ -136,3 +136,8 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 20
 * Created endpoint for **User details** in backend.
 * Created **user.jsx** for user details in frontend.
+
+# Milestone 21
+* Created route for **add address** page in frontend.
+* Create form for adding address.
+* Stored address using usestate hook.
