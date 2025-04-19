@@ -141,3 +141,8 @@ This project is a fully functional ecommerce website designed to provide users w
 * Created route for **add address** page in frontend.
 * Create form for adding address.
 * Stored address using usestate hook.
+
+# Milestone 22
+* Created **Backend for handeling the address** and attached with frontend.
+* Created **backend endpoint for handeling address**.
+* Added **backend endpoint** with frontend.
