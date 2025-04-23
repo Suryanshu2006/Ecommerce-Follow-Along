@@ -14,6 +14,7 @@ const userModel = require('./model/userModel');
 const allProductRouter = require('./controller/allProducts');
 const path = require('path');
 const cartRouter = require('./controller/cartProducts');
+const addressRouter = require("./controller/addressRouter");
 
 app.get("/",(request, response) => {
     try {
