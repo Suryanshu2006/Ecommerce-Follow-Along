@@ -16,7 +16,7 @@ const path = require('path');
 const cartRouter = require('./controller/cartProducts');
 const addressRouter = require("./controller/addressRouter");
 const mailer = require("./nodemailer");
-
+const orderRouter = require("./controller/orderRouter");
 
 app.get("/",(request, response) => {
     try {
@@ -25,6 +25,32 @@ app.get("/",(request, response) => {
         response.status(500).send({message:"error occured"});
     }    
 })
+
+app.use("/order",async (req, res, next) => {
+    console.log("cart")
+    try {
+        const token = req.header("Authorization");
+        console.log(token)
+        if (!token) {
+            return res.status(401).json({ message: "Please login" });
+        }
+        
+        const decoded = jwt.verify(token, process.env.JWT_PASSWORD);
+        const user = await userModel.findById(decoded.id);
+        
+        if (!user && user.id) {
+            return res.status(404).json({ message: "Please signup" });
+        }
+        console.log(user.id);
+        req.userId = user.id; 
+        next();
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json({ message: "Invalid Token", error });
+    }
+}, orderRouter);
+
+
 app.use("/product",productRouter)
 app.use("/user",userRouter)
 

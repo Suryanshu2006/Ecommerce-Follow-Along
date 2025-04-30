@@ -162,3 +162,7 @@ This project is a fully functional ecommerce website designed to provide users w
 * Created **endpoint for order**.
 * Implemented **mail service** for nodemailer.
 * Handled **address** for delivery.
+
+# Milestone 26
+* Implemented mail with Nodemailer.
+* Sending User details to user via mail.
