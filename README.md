@@ -151,3 +151,14 @@ This project is a fully functional ecommerce website designed to provide users w
 * Created **placeorder button in cart page** and added **navigation** to select address.
 * Created **select address page** and provided option to select one address.
 * Created **backend endpoint** to sent all address to user. 
+
+# Milestone 24
+* Displayed **all product** in cart.
+* Displayed **all address in address selection page.**
+* Displayed **total price** in cart.
+* Added **place order button** at the bottom
+
+# Milestone 25
+* Created **endpoint for order**.
+* Implemented **mail service** for nodemailer.
+* Handled **address** for delivery.

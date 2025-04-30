@@ -15,6 +15,8 @@ const allProductRouter = require('./controller/allProducts');
 const path = require('path');
 const cartRouter = require('./controller/cartProducts');
 const addressRouter = require("./controller/addressRouter");
+const mailer = require("./nodemailer");
+
 
 app.get("/",(request, response) => {
     try {
