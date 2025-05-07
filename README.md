@@ -166,3 +166,9 @@ This project is a fully functional ecommerce website designed to provide users w
 # Milestone 26
 * Implemented mail with Nodemailer.
 * Sending User details to user via mail.
+
+# Milestone 27
+* created get request to get my orders.
+
+# Milestone 28
+* add cancel button in my-orders and create an backend endpoint for cancel order.
