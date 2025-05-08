@@ -172,3 +172,13 @@ This project is a fully functional ecommerce website designed to provide users w
 
 # Milestone 28
 * add cancel button in my-orders and create an backend endpoint for cancel order.
+
+# Milestone 29
+* Integrated dummy payment.
+
+# Milestone 30
+* Worked on payment page.
+
+# Milestone 31
+* Implemented redux in frontend.
+* Used redux in user detail page 

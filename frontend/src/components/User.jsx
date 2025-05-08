@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import {useDispatch} from "react-redux";
 const userData =
   JSON.parse(localStorage.getItem("follow-along-auth-token-user-name-id")) || [];
 
@@ -9,6 +9,8 @@ const User = () => {
   const [addresses, setAddresses] = useState([]);
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+  const store = useSelector((state)=>(state.UserReducer));
   // Fetch user addresses
   async function getAddresses() {
     try {
@@ -26,6 +28,11 @@ const User = () => {
 
   useEffect(() => {
     getAddresses();
+    if(userData){
+      dispatch({type:"SET_NAME",payload:{name:userData.name}})
+      dispatch({type:"SET_EMAIL",payload:{email:userData.email}})
+      dispatch({type:"SET_IMAGE",payload:{image:userData.userImage}})
+    }
   }, []);
 
   return (
@@ -35,13 +42,13 @@ const User = () => {
         <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg mx-auto">
           {/* User Image */}
           <img
-            src={userData.userImage}
+            src={store.image}
             alt="User"
             className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-500"
           />
 
           {/* User Name */}
-          <h3 className="text-2xl font-bold text-gray-800 mt-4">{userData.name}</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mt-4">{store.name}</h3>
 
           {/* Add Address Button */}
           <button
